@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="/views/fxml/common.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ManageTagsPageController">
+   <children>
+      <AnchorPane prefHeight="54.0" prefWidth="600.0" style="-fx-border-width: 1; -fx-border-color: transparent transparent black transparent;">
+         <children>
+            <Label graphicTextGap="0.0" prefHeight="26.0" prefWidth="200.0" text="Manage Tags">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Hyperlink fx:id="logOut" layoutX="549.0" layoutY="30.0" text="LogOut" />
+            <Label fx:id="currentUser" alignment="CENTER_RIGHT" layoutX="473.0" layoutY="12.0" prefHeight="18.0" prefWidth="121.0" text="Welcome Dev" />
+            <Hyperlink fx:id="backToAlbums" layoutX="8.0" layoutY="30.0" maxWidth="220.0" text="Back to Albums" />
+         </children>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+      </AnchorPane>
+      <AnchorPane layoutY="58.0" prefHeight="342.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="tagsTable" prefHeight="285.0" prefWidth="600.0">
+              <columns>
+                <TableColumn prefWidth="254.40003049373627" text="TagTitle" />
+                <TableColumn prefWidth="336.7999572753906" text="Single Value Tag" />
+              </columns>
+            </TableView>
+            <AnchorPane layoutX="-2.0" layoutY="297.0" prefHeight="46.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="addTag" layoutX="439.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="122.0" text="Add Tag" />
+                  <Button fx:id="deleteTag" layoutX="25.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="129.0" text="Delete Tag" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

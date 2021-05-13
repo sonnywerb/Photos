@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="/views/fxml/common.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AlbumsPhotoPageController">
+   <children>
+      <AnchorPane prefHeight="54.0" prefWidth="600.0" style="-fx-border-width: 1; -fx-border-color: transparent transparent black transparent;">
+         <children>
+            <Label graphicTextGap="0.0" prefHeight="26.0" prefWidth="200.0" text="Photos">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Hyperlink fx:id="logOut" layoutX="549.0" layoutY="30.0" text="LogOut" />
+            <Label fx:id="currentUser" alignment="CENTER_RIGHT" layoutX="473.0" layoutY="12.0" prefHeight="18.0" prefWidth="121.0" text="Welcome Dev" />
+            <Hyperlink fx:id="albumName" layoutX="8.0" layoutY="30.0" maxWidth="220.0" text="Hyperlink" />
+         </children>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+      </AnchorPane>
+      <AnchorPane layoutY="58.0" prefHeight="342.0" prefWidth="600.0">
+         <children>
+            <AnchorPane prefHeight="298.0" prefWidth="114.0">
+               <children>
+                  <ListView fx:id="photosList" prefHeight="250.0" prefWidth="114.0" />
+                  <AnchorPane layoutY="251.0" prefHeight="46.0" prefWidth="114.0">
+                     <children>
+                        <Button fx:id="nextPic" layoutX="61.0" layoutY="10.0" maxWidth="50.0" minWidth="42.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" style="-fx-max-width: 40; -fx-pref-width: 30; -fx-min-width: 40;" text="=&gt;" />
+                        <Button fx:id="prevPic" layoutX="12.0" layoutY="10.0" minWidth="42.0" mnemonicParsing="false" prefHeight="26.0" style="-fx-max-width: 30; -fx-pref-width: 30; -fx-min-width: 40;" text="&lt;=" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <ScrollPane fx:id="detailsPane" layoutX="113.0" prefHeight="298.0" prefWidth="487.0">
+               <content>
+                  <AnchorPane prefHeight="295.0" prefWidth="475.0">
+                     <children>
+                        <Label prefHeight="34.0" prefWidth="473.0" text="Caption">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="1.0" layoutY="78.0" prefHeight="2.0" prefWidth="459.0" />
+                        <Label layoutY="78.0" prefHeight="34.0" prefWidth="474.0" text="Tags">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tagsTable" layoutX="8.0" layoutY="119.0" prefHeight="175.0" prefWidth="466.0">
+                          <columns>
+                            <TableColumn prefWidth="167.19995880126953" text="TagTitle" />
+                            <TableColumn prefWidth="291.9999694824219" text="TagValue" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="changeCaption" graphicTextGap="1.0" layoutX="419.0" layoutY="34.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="54.0" text="Change Caption" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="picCaption" alignment="TOP_LEFT" layoutX="6.0" layoutY="34.0" prefHeight="38.0" prefWidth="406.0" text="Pic Caption">
+                           <padding>
+                              <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <AnchorPane layoutX="-2.0" layoutY="297.0" prefHeight="46.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="addPic" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" text="Add " />
+                  <Button fx:id="copyPic" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" text="Copy " />
+                  <Button fx:id="movePic" layoutX="117.0" layoutY="10.0" mnemonicParsing="false" text="Move " />
+                  <Button fx:id="pastePic" layoutX="176.0" layoutY="10.0" mnemonicParsing="false" text="Paste" />
+                  <Button fx:id="deletePic" layoutX="229.0" layoutY="10.0" mnemonicParsing="false" text="Delete " />
+                  <Separator layoutX="307.0" layoutY="4.0" orientation="VERTICAL" prefHeight="38.0" prefWidth="6.0" />
+                  <Button fx:id="addTag" layoutX="318.0" layoutY="10.0" mnemonicParsing="false" text="Add Tag" />
+                  <Separator layoutX="467.0" layoutY="4.0" orientation="VERTICAL" prefHeight="38.0" prefWidth="6.0" />
+                  <Button fx:id="openInNewTab" layoutX="488.0" layoutY="10.0" mnemonicParsing="false" text="Open in new tab" />
+                  <Button fx:id="deleteTag" layoutX="384.0" layoutY="10.0" mnemonicParsing="false" text="Delete Tag" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

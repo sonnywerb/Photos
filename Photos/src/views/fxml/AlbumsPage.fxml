@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="/views/fxml/common.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AlbumsViewController">
+   <children>
+      <AnchorPane prefHeight="54.0" prefWidth="600.0" style="-fx-border-width: 1; -fx-border-color: transparent transparent black transparent;">
+         <children>
+            <Label prefHeight="54.0" prefWidth="200.0" text="Albums">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Hyperlink fx:id="logOut" layoutX="549.0" layoutY="30.0" text="LogOut" />
+            <Label fx:id="currentUser" alignment="CENTER_RIGHT" layoutX="473.0" layoutY="12.0" prefHeight="18.0" prefWidth="121.0" text="Welcome Dev" />
+         </children>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+      </AnchorPane>
+      <AnchorPane layoutY="58.0" prefHeight="342.0" prefWidth="600.0">
+         <children>
+            <AnchorPane prefHeight="297.0" prefWidth="600.0">
+               <children>
+                  <TableView fx:id="albumTable" layoutY="-4.0" prefHeight="298.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn editable="false" prefWidth="43.19998246431351" sortable="false" text="#" />
+                      <TableColumn editable="false" prefWidth="173.59997177124023" sortable="false" text="Album Name" />
+                        <TableColumn editable="false" prefWidth="92.80000305175781" sortable="false" text="Num Photos" />
+                        <TableColumn editable="false" prefWidth="144.0" sortable="false" text="Earliest Date" />
+                        <TableColumn editable="false" prefWidth="144.0" sortable="false" text="Latest Date" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-2.0" layoutY="297.0" prefHeight="46.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="addAlbum" layoutX="17.0" layoutY="10.0" mnemonicParsing="false" text="Add Album" />
+                  <Button fx:id="deleteAlbum" layoutX="102.0" layoutY="10.0" mnemonicParsing="false" text="Delete Album" />
+                  <Button fx:id="renameAlbum" layoutX="201.0" layoutY="10.0" mnemonicParsing="false" text="Rename Album" />
+                  <Separator layoutX="471.0" layoutY="5.0" orientation="VERTICAL" prefHeight="37.0" prefWidth="0.0" />
+                  <Button fx:id="searchPhotos" layoutX="498.0" layoutY="10.0" mnemonicParsing="false" text="Search Photos" />
+                  <Separator layoutX="322.0" layoutY="4.0" orientation="VERTICAL" prefHeight="37.0" prefWidth="0.0" />
+                  <Button fx:id="manageTags" layoutX="344.0" layoutY="11.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" text="Manage Tags" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

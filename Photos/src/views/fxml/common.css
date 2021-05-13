@@ -1,0 +1,30 @@
+.table-row-cell:selected {
+    -fx-background-color: #c5cbcd;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.list-view .scroll-bar:horizontal .increment-arrow,
+.list-view .scroll-bar:horizontal .decrement-arrow,
+.list-view .scroll-bar:horizontal .increment-button,
+.list-view .scroll-bar:horizontal .decrement-button {
+    -fx-padding:0;
+}
+
+.list-view, .table-view, .table-cell, .table-column, .table-row-cell, .hyperlink, .scroll-pane, .anchor-pane {
+	-fx-focus-color: transparent;
+	-fx-faint-focus-color: transparent;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-text-fill: white;
+    -fx-background-color: #8f8;
+}
+
+.combo-box .list-cell:focused, .combo-box .list-cell:filled:selected {
+    -fx-background: white;
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em; 
+}
